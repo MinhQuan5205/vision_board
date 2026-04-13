@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futuristic Vision Board 2024 - Visual Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --neon-cyan: #00f3ff;
+        --neon-purple: #bc13fe;
+        --neon-pink: #ff00bd;
+        --dark-bg: #030712;
+      }
+
+      body {
+        font-family: "Rajdhani", sans-serif;
+        background-color: var(--dark-bg);
+        color: #e5e7eb;
+        overflow-x: hidden;
+      }
+
+      .font-orbitron {
+        font-family: "Orbitron", sans-serif;
+      }
+
+      .bg-grid {
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(0, 243, 255, 0.05) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(0, 243, 255, 0.05) 1px,
+            transparent 1px
+          );
+        background-size: 40px 40px;
+      }
+
+      .glass-panel {
+        background: rgba(17, 24, 39, 0.6);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(0, 243, 255, 0.2);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .glass-panel:hover {
+        border-color: var(--neon-cyan);
+        box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+        transform: translateY(-5px);
+      }
+
+      .image-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, transparent, var(--dark-bg));
+        z-index: 1;
+      }
+
+      .neon-text-cyan {
+        text-shadow: 0 0 10px var(--neon-cyan);
+      }
+
+      .scanline {
+        width: 100%;
+        height: 2px;
+        background: rgba(0, 243, 255, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: scan 4s linear infinite;
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      @keyframes scan {
+        0% {
+          top: 0;
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          top: 100%;
+          opacity: 0;
+        }
+      }
+
+      .circuit-corner {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 1.5px solid var(--neon-cyan);
+        z-index: 20;
+      }
+      .top-left {
+        top: -2px;
+        left: -2px;
+        border-right: 0;
+        border-bottom: 0;
+      }
+      .top-right {
+        top: -2px;
+        right: -2px;
+        border-left: 0;
+        border-bottom: 0;
+      }
+      .bottom-left {
+        bottom: -2px;
+        left: -2px;
+        border-right: 0;
+        border-top: 0;
+      }
+      .bottom-right {
+        bottom: -2px;
+        right: -2px;
+        border-left: 0;
+        border-top: 0;
+      }
+
+      .glitch-img {
+        filter: contrast(1.1) brightness(0.9);
+        transition: all 0.5s;
+      }
+
+      .minimal-placeholder {
+        background: #0a0a0a;
+        border: 1px dashed rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      [contenteditable]:focus {
+        outline: none;
+        background: rgba(0, 243, 255, 0.1);
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body class="bg-grid min-h-screen p-4 md:p-10">
+    <div class="max-w-7xl mx-auto">
+      <!-- Header HUD -->
+      <header
+        class="relative mb-12 text-center py-6 border-b border-cyan-900/50"
+      >
+        <div
+          class="absolute -top-4 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.5em] text-cyan-500 uppercase font-mono"
+        >
+          Vision System: Calibrated
+        </div>
+        <h1
+          class="font-orbitron text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 neon-text-cyan"
+        >
+          Nguyễn Minh Quân
+        </h1>
+        <p
+          class="mt-2 text-cyan-300 tracking-[0.3em] font-light uppercase text-[10px]"
+        >
+          Vision Board
+        </p>
+      </header>
+
+      <!-- Main Layout -->
+      <div class="grid grid-cols-12 gap-6">
+        <!-- 1. STRENGTH -->
+        <div
+          class="glass-panel col-span-12 md:col-span-4 rounded-lg relative group h-[380px]"
+        >
+          <img
+            src="img/cầncu.jpg"
+            class="absolute inset-0 w-full h-full object-cover glitch-img opacity-40"
+            alt="Strength"
+          />
+          <div class="image-overlay"></div>
+          <div class="scanline"></div>
+          <div class="circuit-corner top-left"></div>
+
+          <div class="relative z-10 p-6 flex flex-col h-full">
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-8 h-8 bg-cyan-500/20 rounded flex items-center justify-center border border-cyan-500"
+              >
+                <svg
+                  class="w-5 h-5 text-cyan-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h2
+                class="font-orbitron text-lg font-bold tracking-widest text-cyan-400"
+              >
+                Strength
+              </h2>
+            </div>
+            <div class="mt-auto space-y-4">
+              <div
+                class="p-4 bg-cyan-900/30 rounded border-l-4 border-cyan-500 backdrop-blur-md"
+              >
+                <p
+                  class="text-base font-bold leading-tight"
+                  contenteditable="true"
+                >
+                  Sự cần cù & Chăm chỉ. Theo đuổi mục tiêu tới tận cùng.
+                </p>
+              </div>
+              <div
+                class="p-3 bg-white/5 rounded italic text-[11px] text-cyan-200"
+              >
+                <p contenteditable="true">
+                  "Đặt mục tiêu là bước đầu tiên để biến cái vô hình thành cái
+                  hữu hình."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. VALUE -->
+        <div
+          class="glass-panel col-span-12 md:col-span-4 rounded-lg relative flex flex-col items-center justify-center text-center border-purple-500/30 h-[380px]"
+        >
+          <img
+            src="img/trâu.jpg"
+            class="absolute inset-0 w-full h-full object-cover glitch-img opacity-30"
+            alt="Value"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent z-1"
+          ></div>
+
+          <div class="relative z-10 p-8">
+            <div class="mb-6 relative inline-block">
+              <div
+                class="w-20 h-20 border-2 border-purple-500 rounded-full flex items-center justify-center animate-[spin_20s_linear_infinite]"
+              >
+                <div
+                  class="w-16 h-16 border border-dashed border-purple-400 rounded-full"
+                ></div>
+              </div>
+            </div>
+            <h2 class="font-orbitron text-xl font-bold mb-4 text-purple-400">
+              CORE VALUES
+            </h2>
+            <div class="space-y-4">
+              <p class="text-lg text-white font-bold" contenteditable="true">
+                Lan tỏa sự tích cực
+              </p>
+              <div
+                class="p-3 bg-purple-900/20 border border-purple-500/20 rounded text-xs text-purple-200"
+                contenteditable="true"
+              >
+                Con trâu cày cuốc để có được cánh đồng lúa vàng ươm.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. INTEREST -->
+        <div
+          class="glass-panel col-span-12 md:col-span-4 rounded-lg relative h-[380px]"
+        >
+          <img
+            src="img/tự do.jpg"
+            class="absolute inset-0 w-full h-full object-cover glitch-img opacity-40"
+            alt="Interest"
+          />
+          <div class="image-overlay"></div>
+          <div class="relative z-10 p-6 h-full flex flex-col">
+            <div class="flex items-center gap-2 mb-6">
+              <div class="w-2 h-6 bg-pink-500"></div>
+              <h2
+                class="font-orbitron text-lg font-bold tracking-widest text-pink-400"
+              >
+                Interest
+              </h2>
+            </div>
+            <div class="mt-auto space-y-4">
+              <div
+                class="p-4 bg-black/60 border border-pink-500/30 rounded-xl backdrop-blur-sm"
+              >
+                <p
+                  class="text-base font-bold text-white"
+                  contenteditable="true"
+                >
+                  Sự tự do không gò bó.
+                </p>
+              </div>
+              <p
+                class="italic text-xs text-pink-200 pl-4 border-l-2 border-pink-500"
+                contenteditable="true"
+              >
+                "Là một con chim bay giữa bầu trời xa rộng."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. TARGET -->
+        <div
+          class="glass-panel col-span-12 md:col-span-4 rounded-lg p-6 border-emerald-500/30 flex flex-col h-[380px]"
+        >
+          <div
+            class="flex-1 relative rounded-lg overflow-hidden mb-4 border border-emerald-500/20"
+          >
+            <img
+              src="img/doraemon.jpg"
+              class="absolute inset-0 w-full h-full object-cover"
+              alt="Doraemon"
+            />
+          </div>
+          <div class="flex flex-col justify-center">
+            <h2
+              class="font-orbitron text-[10px] font-bold text-emerald-400 mb-2 uppercase tracking-[0.3em]"
+            >
+              Audience Target
+            </h2>
+            <p
+              class="text-3xl font-orbitron font-bold text-white leading-none"
+              contenteditable="true"
+            >
+              DORAEMON
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. IDENTITY STYLE (TEXT) -->
+        <div
+          class="glass-panel col-span-12 md:col-span-4 rounded-lg p-6 border-white/20 h-[380px] flex flex-col justify-center"
+        >
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-1 h-8 bg-white opacity-40"></div>
+            <h2
+              class="font-orbitron text-lg font-bold text-white tracking-widest uppercase"
+            >
+              Identity
+            </h2>
+          </div>
+          <div class="space-y-4">
+            <p
+              class="text-2xl font-light tracking-tighter text-white"
+              contenteditable="true"
+            >
+              MINIMALISM
+            </p>
+            <p
+              class="text-[10px] text-gray-500 uppercase tracking-widest border-b border-white/10 pb-2"
+            >
+              Tối giản & Tinh tế
+            </p>
+            <p
+              class="italic text-xs text-gray-400 leading-relaxed"
+              contenteditable="true"
+            >
+              "Loại bỏ những thứ thừa thãi để tập trung vào giá trị cốt lõi."
+            </p>
+          </div>
+        </div>
+
+        <!-- 7. VISUAL STYLE MOOD BOARD (NEW IMAGE BOX) -->
+        <div
+          class="glass-panel col-span-12 md:col-span-4 rounded-lg p-4 border-cyan-500/20 h-[380px]"
+        >
+          <h2
+            class="font-orbitron text-[10px] font-bold text-cyan-400 mb-4 uppercase tracking-[0.2em] text-center"
+          >
+            Visual Mood Board
+          </h2>
+          <img src="img/style.jpg" />
+          <div class="circuit-corner bottom-right border-cyan-500/30"></div>
+        </div>
+
+        <!-- 5. GOAL -->
+        <div
+          class="glass-panel col-span-12 rounded-lg border-cyan-500 bg-gradient-to-br from-cyan-950/40 to-black p-8 relative"
+        >
+          <div
+            class="absolute right-0 top-0 w-1/4 h-full overflow-hidden opacity-20 pointer-events-none"
+          >
+            <img
+              src="img/cầncu.jpg"
+              class="w-full h-full object-cover grayscale"
+              alt="Goal Cat"
+            />
+          </div>
+
+          <div
+            class="relative z-10 flex flex-col md:flex-row gap-12 items-center"
+          >
+            <div class="flex-1">
+              <h2
+                class="font-orbitron text-2xl font-bold text-white neon-text-cyan mb-6"
+              >
+                GOAL PROTOCOL
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="space-y-3">
+                  <p
+                    class="text-[10px] text-cyan-600 uppercase tracking-widest font-mono"
+                  >
+                    Autonomy Status
+                  </p>
+                  <p
+                    class="text-xl font-bold text-white leading-tight"
+                    contenteditable="true"
+                  >
+                    Người tự chủ trong tất cả các vấn đề.
+                  </p>
+                </div>
+                <div class="space-y-3">
+                  <p
+                    class="text-[10px] text-cyan-600 uppercase tracking-widest font-mono"
+                  >
+                    Logic Framework
+                  </p>
+                  <p
+                    class="text-xl font-bold text-cyan-400 leading-tight"
+                    contenteditable="true"
+                  >
+                    Chủ động không chỉ về cảm xúc mà còn là lý trí.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-full md:w-64 text-center md:border-l border-cyan-900/50 md:pl-8"
+            >
+              <p
+                class="text-6xl font-orbitron font-bold text-cyan-500 tracking-tighter"
+              >
+                90%
+              </p>
+              <p
+                class="text-[10px] text-cyan-700 uppercase mt-2 tracking-widest font-mono"
+              >
+                Sync Progress
+              </p>
+              <div
+                class="mt-4 w-full h-1 bg-cyan-900/50 rounded-full overflow-hidden"
+              >
+                <div
+                  class="h-full bg-cyan-400 w-[90%] shadow-[0_0_15px_#00f3ff]"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer
+        class="mt-12 text-center text-[10px] tracking-[0.5em] text-cyan-800 uppercase font-mono"
+      >
+        Sovereign // Independence // Minimalism // 2026
+      </footer>
+    </div>
+  </body>
+</html>
